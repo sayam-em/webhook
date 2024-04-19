@@ -15,16 +15,16 @@ type WebhookPayload struct {
 	Url string `json:"url"`
 	WebhookId string `json:"WebhookId"`
 	Data struct {
-		Id string `json:"url"`
-		Payment string `json:"payment"`
-		Event string `json:"event"`
-		Date string `json:"created"`
+		Id      string `json:"id"`
+		Lat     float64 `json:"lat"`
+		Long    float64 `json:"long"`
+		Created string `json:"created"`
 	} `json:"data"`
 }
 
 func Subscribe(ctx context.Context, client *redis.Client, webhookQueue chan WebhookPayload) error {  
 
-	pubSub := client.Subscribe(ctx, "payments")
+	pubSub := client.Subscribe(ctx, "coordinates")
 
 	defer func (pubSub *redis.PubSub) {
 		if err := pubSub.Close(); err != nil {

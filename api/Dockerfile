@@ -1,6 +1,12 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11-alpine
 
+# Install build dependencies
+RUN apk update && apk add --no-cache build-base libffi-dev openssl-dev
+
+# Install librdkafka and its dependencies
+RUN apk add --no-cache librdkafka-dev
+
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 

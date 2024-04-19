@@ -4,8 +4,8 @@ import (
    "context"  
    "log"  
    "time"  
-   "github.com/sayam-em/webhook/sender"  
-   redisClient "github.com/sayam-em/webhook/redis"  
+   "webhook/sender"  
+   redisClient "webhook/redis"  
 )
 
 func ProcessWebhooks(ctx context.Context, webhookQueue chan redisClient.WebhookPayload) {  

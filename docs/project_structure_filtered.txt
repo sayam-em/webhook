@@ -1,0 +1,23 @@
+--- Folder Structure ---
+.env
+.gitignore
+[api]
+    ├── app.py
+    ├── Dockerfile
+    └── requirements.txt
+docker-compose.yaml
+Dockerfile
+[docs]
+    └── .project_structure_filter
+go.mod
+go.sum
+main.go
+[queue]
+    └── worker.go
+README.md
+[redis]
+    └── redis.go
+[sender]
+    └── webhook.go
+
+--- File Contents ---

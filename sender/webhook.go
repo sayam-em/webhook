@@ -8,12 +8,11 @@ import (
 	"log"
 	"net/http"
 )
-
 type Payload struct {
-	Event string
-	Date string
 	Id string
-	Payment string
+	Lat string
+	Long string
+	Date string
 }
 
 

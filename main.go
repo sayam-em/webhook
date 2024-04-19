@@ -4,9 +4,8 @@ import (
 	"context"
 	"log"
 	"os"
-
-	redisClient "github.com/sayam-em/webhook/redis"  
-	"github.com/sayam-em/webhook/queue"  
+	"webhook/queue"  
+	redisClient "webhook/redis"  
 
 	"github.com/go-redis/redis/v8"
 
